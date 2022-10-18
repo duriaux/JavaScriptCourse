@@ -31,9 +31,7 @@ function composition3(...functions){
 
     return functions.reduce((acc, fn) => {
 
-      return fn(acc);
-
-    });
+      return fn(acc)},value);
 
   }
 
@@ -60,12 +58,12 @@ return phrase.split('').join(' ');
 }
 
 
-let compose = composition3( scream3,emphasize3,slowDown3)
+const compose = composition3( scream3,emphasize3,slowDown3)
 
 console.log(compose('whatch out for the hole'));
 
 
-let compose2 = composition3(scream3);
+const compose2 = composition3(scream3);
 console.log(compose2('stop'));
 
 
