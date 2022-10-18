@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Lesson6</title>
+</head>
+<body>
+
+   <h1> English's Curiosities</h1>
+
+<h2>
+
+TEAR <br>
+TEAR <br>
+LIVE <br>
+LIVE <br>
+LEAD <br>
+LEAD <br>
+BOW <br>
+BOW <br>
+READ <br>
+READ <br>
+
+
+
+</h2>
+
+
+<script> 
+   
+   const greeting =(name) => alert("hello, " + name+"!")
+
+
+   
+   const processEnterUser = (callback) => {
+
+const name = prompt("type your name: ");
+
+callback(name);
+
+   }
+   
+   //processEnterUser(greeting)
+
+
+
+const country = country => alert("i am from "+country);
+
+const nationality = nation => {
+
+const language = prompt("type your country: ");
+
+nation(language);
+
+}
+
+//nationality(country);
+
+
+
+
+
+// do in devTools:
+
+//const callback = e => alert("an event //happened " e.type);
+ //window.addEventListener("click", callback);
+
+
+
+
+const sum = (x, y) => x + y;
+
+const calculate = (x, y, computer) => computer(x, y);
+
+const result = calculate(30, 10, sum);
+
+//console.log(result);
+
+
+
+const subtraction = (a, b) => a - b;
+
+const calculate2 = (a, b, math) => math(a, b);
+
+const result2 = calculate2(10, 5,subtraction);
+
+//console.log(result2);
+
+
+
+
+const arr = [1, 3, 5];
+
+const newArr = arr.map(x => x + x);
+
+//console.log(newArr);
+
+
+const arr2 = [1,4,7,10];
+
+const newArr2 = arr2.map(x => x*x);
+
+//console.log(newArr2);
+
+
+   
+   </script>
+   
+</body>
+</html>

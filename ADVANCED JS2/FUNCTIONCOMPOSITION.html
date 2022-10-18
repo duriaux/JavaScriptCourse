@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function Composition</title>
+</head>
+<body>
+  
+<h1>
+  English's Curiosity
+</h1>
+<h2>Up Yours & Beat it</h2>
+
+
+<script>
+
+function composition(f1,f2,f3,phrase){
+
+return f3(f2(f1(phrase)));
+
+}
+
+function scream(text){
+
+return text.toUpperCase();
+
+}
+
+function emphasize(text){
+
+  return `${text}!!!!`;
+
+}
+
+function slowDown(text){
+
+  return text.split('').join(' ');
+}
+
+
+
+
+const compose = composition(scream,emphasize,slowDown,'watch out for the hole');
+
+//console.log(compose);
+
+function composition2(f1,f2,f3){
+
+return function(phrase){
+
+  f3(f2(f1(phrase)));
+}
+
+
+}
+function scream2(text){
+
+  return text.toUpperCase();
+
+}
+
+function emphasize2(text){
+
+return `${text}!!!`;
+
+}
+
+function slowDown2(text){
+
+  return text.split("").join(" ");
+
+}
+
+
+const makeUp = composition2(
+
+scream2, emphasize2, slowDown2);
+
+console.log(makeUp('whatch out for the hole'));
+
+//console.log(makeUp('Stop'));
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

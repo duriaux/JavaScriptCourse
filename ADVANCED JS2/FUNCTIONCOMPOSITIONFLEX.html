@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function composition2(curry)</title>
+</head>
+<body>
+
+<h1>Prasal Verbs</h1>
+
+<ul>
+<li>get off</li>
+<li>back off</li>
+<li>day off</li>
+<li>x% off</li>
+<li>cool off</li>
+<li>face off</li>
+<li>piss off</li>
+<li>knock it off</li>
+</ul>
+
+
+
+  <script>
+
+function composition3(...functions){
+
+  return function(value){
+
+    return functions.reduce((acc, fn) => {
+
+      return fn(acc);
+
+    });
+
+  }
+
+
+
+}
+
+function scream3(phrase){
+
+  return phrase.toUpperCase();
+
+}
+
+function emphasize3(phrase){
+
+  return `${phrase}!!!`;
+
+}
+
+function slowDown3(phrase){
+
+return phrase.split('').join(' ');
+
+}
+
+
+let compose = composition3( scream3,emphasize3,slowDown3)
+
+console.log(compose('whatch out for the hole'));
+
+
+let compose2 = composition3(scream3);
+console.log(compose2('stop'));
+
+
+console.log(composition3(scream3, emphasize3, slowDown3)("back off and get off"));
+
+
+  </script>
+</body>
+</html>
