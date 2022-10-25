@@ -64,7 +64,10 @@ this.frameWork = frameWork;
 
 }
 
-class BackEndDev1 extends Dev{
+
+
+
+class BackEndDev extends Dev{
 
 constructor(name, age, mainLanguage,developerType, database){
 super();
@@ -78,38 +81,16 @@ this.database = database;
 
 }
 
-class BackEndDev2 extends Dev{
-
-  constructor(name, age, mainLanguage,developerType,database){
-super(name, age, mainLanguage, developerType);
-this.database = database;
-
-
-  }
-
-}
 
 
 
 
 
 
-//const frontEnd1 = new FrontEndDev("Javier", 24,"JavaScript","fronEnd", "React");
+const frontEnd = new FrontEndDev("Javier", 24,"JavaScript","fronEnd", "React");
 
-//const backEnd1 = new BackEndDev("Renoir", 55, "JavaScript","backEnd", "SQL server");
+const backEnd = new BackEndDev("Renoir", 55, "JavaScript","backEnd", "SQL server");
 
-const backEnd2 = new BackEndDev2("Sofhie",25,"JavaScript","backEnd","SQL Oracle");
-
-//console.log(frontEnd1);
-//frontEnd1.salutation();
-
-
-
-//console.log(backEnd1);
-//backEnd1.salutation();
-
-console.log(backEnd2);
-backEnd2.salutation();
 
 </script>
 
